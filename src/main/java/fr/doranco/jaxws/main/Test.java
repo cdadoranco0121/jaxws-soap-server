@@ -14,7 +14,7 @@ public class Test {
 			
 			IEtudiantService etudiantService = new EtudiantService();
 			
-			Etudiant etudiant = new Etudiant("CAMUS", "Albert", "Ecrivain");
+			Etudiant etudiant = new Etudiant("CAMUS", "Albert", "Ecrivain", 45);
 			System.out.println("Test de la méthode d'ajout d'un étudiant: " + etudiant);
 			Etudiant etudiantAdded = etudiantService.addEtudiant(etudiant);
 			
@@ -24,7 +24,7 @@ public class Test {
 				System.out.println("L'étudiant n'a pas été ajouté !");			
 			}
 			
-			etudiant = new Etudiant("HUGO", "Victor", "Romancier");
+			etudiant = new Etudiant("HUGO", "Victor", "Romancier", 45);
 			System.out.println("");
 			System.out.println("Test de la méthode d'ajout d'un étudiant: " + etudiant);
 			etudiantAdded = etudiantService.addEtudiant(etudiant);

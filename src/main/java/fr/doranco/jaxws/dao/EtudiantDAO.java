@@ -31,6 +31,7 @@ public class EtudiantDAO implements IEtudiantDAO {
 			etudiant.setNom(rs.getString("nom"));
 			etudiant.setPrenom(rs.getString("prenom"));
 			etudiant.setSpecialite(rs.getString("specialite"));
+			etudiant.setAge(rs.getInt("age"));
 			
 			listeEtudiant.add(etudiant);
 		}
@@ -58,6 +59,7 @@ public class EtudiantDAO implements IEtudiantDAO {
 			etudiant.setNom(rs.getString("nom"));
 			etudiant.setPrenom(rs.getString("prenom"));
 			etudiant.setSpecialite(rs.getString("specialite"));
+			etudiant.setAge(rs.getInt("age"));
 		}
 		
 		return etudiant;
@@ -69,13 +71,14 @@ public class EtudiantDAO implements IEtudiantDAO {
 		PreparedStatement ps = null;
 			
 		connection = DataSourceConnexion.getInstance().getConnection();
-		String requete = "INSERT INTO etudiant (nom, prenom, specialite) "
-				+ "VALUES(?, ?, ?)";
+		String requete = "INSERT INTO etudiant (nom, prenom, specialite, age) "
+				+ "VALUES(?, ?, ?, ?)";
 		ps = connection.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
 		
 		ps.setString(1, etudiant.getNom());
 		ps.setString(2, etudiant.getPrenom());
 		ps.setString(3, etudiant.getSpecialite());
+		ps.setInt(4, etudiant.getAge());
 		ps.executeUpdate();
 		
 		ResultSet rs = ps.getGeneratedKeys();
