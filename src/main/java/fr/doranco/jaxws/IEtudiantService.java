@@ -22,4 +22,10 @@ public interface IEtudiantService {
 	
 	@WebMethod
 	Etudiant getEtudiantById(@WebParam(name = "etudiant") Integer id) throws SQLException, MissingResourceException, IOException;
+	
+	@WebMethod
+	Etudiant updateEtudiant(@WebParam(name = "etudiant") Etudiant etudiant) throws SQLException, MissingResourceException, IOException;
+	
+	@WebMethod
+	void removeEtudiant(@WebParam(name = "etudiant") Integer id) throws SQLException, MissingResourceException, IOException;
 }

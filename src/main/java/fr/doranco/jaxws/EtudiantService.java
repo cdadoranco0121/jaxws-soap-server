@@ -34,4 +34,14 @@ public class EtudiantService implements IEtudiantService {
 		return etudiantDAO.getEtudiantById(id);
 	}
 
+	@Override
+	public Etudiant updateEtudiant(Etudiant etudiant) throws SQLException, MissingResourceException, IOException {
+		return etudiantDAO.updateEtudiant(etudiant);
+	}
+
+	@Override
+	public void removeEtudiant(Integer id) throws SQLException, MissingResourceException, IOException {
+		etudiantDAO.removeEtudiant(id);
+	}
+
 }

@@ -11,4 +11,6 @@ public interface IEtudiantDAO {
 	List<Etudiant> getEtudiants() throws SQLException, MissingResourceException, IOException;
 	Etudiant getEtudiantById(Integer id) throws SQLException, MissingResourceException, IOException;
 	Etudiant addEtudiant(Etudiant etudiant) throws SQLException, MissingResourceException, IOException;
+	Etudiant updateEtudiant(Etudiant etudiant) throws SQLException, MissingResourceException, IOException;
+	void removeEtudiant(Integer id) throws SQLException, MissingResourceException, IOException;
 }
