@@ -10,11 +10,11 @@ public class EtudiantWebServicePublisher {
 	public static void main(String[] args) throws ClassNotFoundException {
 		try {
 			System.out.println("Publication du service web 'EtudiantService' en cours...");
-			Endpoint.publish("http://localhost/9991/ws/etudiant-service", new EtudiantService());
+			Endpoint.publish("http://localhost:9991/ws/etudiant-service", new EtudiantService());
 			System.out.println("Web service 'EtudiantService' publié avec succès");
 			
 			System.out.println("\nPublication du service web 'CoursService' en cours...");
-			Endpoint.publish("http://localhost/9991/ws/cours-service", new CoursService());
+			Endpoint.publish("http://localhost:9991/ws/cours-service", new CoursService());
 			System.out.println("Web service 'CoursService' publié avec succès");
 			
 		} catch (Exception e) {
