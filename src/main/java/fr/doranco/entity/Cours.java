@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Cours {
 	
+	// @XmlTransient: permet de ne pas considérer un paramètre.
+	
 	@XmlElement(required = false)
 	private Integer id;
 	@XmlElement(required = true)

@@ -1,9 +1,6 @@
 package fr.doranco.jaxws;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.MissingResourceException;
 
 import javax.jws.WebService;
 
@@ -19,27 +16,27 @@ public class CoursService implements ICoursService {
 	private ICoursDAO coursDAO = new CoursDAO();
 
 	@Override
-	public List<Cours> getCours() throws SQLException, MissingResourceException, IOException {
+	public List<Cours> getCours() throws Exception {
 		return coursDAO.getCours();
 	}
 
 	@Override
-	public Cours getCoursById(Integer id) throws SQLException, MissingResourceException, IOException {
+	public Cours getCoursById(Integer id) throws Exception {
 		return coursDAO.getCoursById(id);
 	}
 
 	@Override
-	public Cours addCours(Cours cours) throws SQLException, MissingResourceException, IOException {
+	public Cours addCours(Cours cours) throws Exception {
 		return coursDAO.addCours(cours);
 	}
 
 	@Override
-	public Cours updateCours(Cours cours) throws SQLException, MissingResourceException, IOException {
+	public Cours updateCours(Cours cours) throws Exception {
 		return coursDAO.updateCours(cours);
 	}
 
 	@Override
-	public void removeCours(Integer id) throws SQLException, MissingResourceException, IOException {
+	public void removeCours(Integer id) throws Exception {
 		coursDAO.removeCours(id);
 	}
 

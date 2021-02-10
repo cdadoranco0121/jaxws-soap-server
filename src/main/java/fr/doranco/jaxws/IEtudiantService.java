@@ -1,9 +1,6 @@
 package fr.doranco.jaxws;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.MissingResourceException;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -15,17 +12,17 @@ import fr.doranco.entity.Etudiant;
 public interface IEtudiantService {
 	
 	@WebMethod
-	Etudiant addEtudiant(@WebParam(name = "etudiant") Etudiant etudiant) throws SQLException, MissingResourceException, IOException;
+	Etudiant addEtudiant(@WebParam(name = "etudiant") Etudiant etudiant) throws Exception;
 	
 	@WebMethod
-	List<Etudiant> getEtudiants() throws SQLException, MissingResourceException, IOException;
+	List<Etudiant> getEtudiants() throws Exception;
 	
 	@WebMethod
-	Etudiant getEtudiantById(@WebParam(name = "etudiant") Integer id) throws SQLException, MissingResourceException, IOException;
+	Etudiant getEtudiantById(@WebParam(name = "id") Integer id) throws Exception;
 	
 	@WebMethod
-	Etudiant updateEtudiant(@WebParam(name = "etudiant") Etudiant etudiant) throws SQLException, MissingResourceException, IOException;
+	Etudiant updateEtudiant(@WebParam(name = "etudiant") Etudiant etudiant) throws Exception;
 	
 	@WebMethod
-	void removeEtudiant(@WebParam(name = "etudiant") Integer id) throws SQLException, MissingResourceException, IOException;
+	void removeEtudiant(@WebParam(name = "id") Integer id) throws Exception;
 }
